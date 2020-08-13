@@ -14,20 +14,13 @@ class Allergies
         list(score).includes?(allergen) ? true : false
     end
 
-    def self.list(score : Int32) : Array 
-        list = @@allergies.map do |key, value|    
+    def self.list(score : Int32) : Array
+        score %= 256
+        return @@allergies.map do |key, value|    
             if score - value >= 0
                 score -= value
                 key
             end
         end.compact.reverse
-        list
     end
-
-    puts list(0) 
-    puts list(1)
-    puts list(2)
-    puts list(8)
-    puts list(3)
-
 end
