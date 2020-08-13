@@ -11,7 +11,7 @@ class Allergies
     }
 
     def self.allergic_to(allergen : String, score : Int32) : Bool
-        false
+        list(score).includes?(allergen) ? true : false
     end
 
     def self.list(score : Int32) : Array 

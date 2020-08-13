@@ -6,11 +6,11 @@ describe "Allergies" do
     Allergies.allergic_to("eggs", 0).should eq(false)
   end
 
-  pending "allergic only to eggs" do
+  it "allergic only to eggs" do
     Allergies.allergic_to("eggs", 1).should eq(true)
   end
 
-  pending "allergic to eggs and something else" do
+  it "allergic to eggs and something else" do
     Allergies.allergic_to("eggs", 3).should eq(true)
   end
 
