@@ -162,35 +162,35 @@ describe "Allergies" do
     Allergies.allergic_to("cats", 255).should eq(true)
   end
 
-  pending "no allergies" do
+  it "no allergies" do
     Allergies.list(0).should eq([] of String)
   end
 
-  pending "just eggs" do
+  it "just eggs" do
     Allergies.list(1).should eq(["eggs"])
   end
 
-  pending "just peanuts" do
+  it "just peanuts" do
     Allergies.list(2).should eq(["peanuts"])
   end
 
-  pending "just strawberries" do
+  it "just strawberries" do
     Allergies.list(8).should eq(["strawberries"])
   end
 
-  pending "eggs and peanuts" do
+  it "eggs and peanuts" do
     Allergies.list(3).should eq(["eggs", "peanuts"])
   end
 
-  pending "more than eggs but not peanuts" do
+  it "more than eggs but not peanuts" do
     Allergies.list(5).should eq(["eggs", "shellfish"])
   end
 
-  pending "lots of stuff" do
+  it "lots of stuff" do
     Allergies.list(248).should eq(["strawberries", "tomatoes", "chocolate", "pollen", "cats"])
   end
 
-  pending "everything" do
+  it "everything" do
     Allergies.list(255).should eq(["eggs", "peanuts", "shellfish", "strawberries", "tomatoes", "chocolate", "pollen", "cats"])
   end
 
